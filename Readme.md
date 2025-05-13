@@ -1,4 +1,4 @@
-- git clone repo-url
+- git clone https://github.com/tarunkatariaonline/amtech_assignment
 - cd amtech
 - npm i
 - node index.js / npm start
