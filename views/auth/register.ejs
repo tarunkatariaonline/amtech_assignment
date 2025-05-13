@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+    }
+
+    .input-box {
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+
+    p {
+      color: #e63946;
+      margin-top: 10px;
+    }
+  </style>
+<body>
+    <h2>Register page</h2>
+   
+<form method="POST" action="/register">
+  <input class="input-box" type="text" name="username" placeholder="username" required>
+  <input class="input-box" type="email" name="email"  placeholder="email" required />
+  <input class="input-box" type="password" name="password" minlength="8" placeholder="Password" required />
+   <% if (message) { %>
+ <p>message : <%= message %></p>
+<% } %>
+  <button type="submit">Register</button>
+</form>
+</body>
+</html>

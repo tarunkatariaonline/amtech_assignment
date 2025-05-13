@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= username %></title>
+</head>
+  <style>
+   
+
+    button {
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+  </style>
+<body>
+    <% if (username) { %>
+         <p>id: <%= id %></p>
+  <p>username : <%= username %></p>
+    <p>email  : <%= email %></p>
+    <p>created_at  : <%= created_at %></p>
+    <form action="/logout">
+    <button>logout</button>
+<% } %>
+
+ <% if (!username) { %>
+  <p>user is not authanticated !</p>
+<a href="/login"><button>Login</button></a> 
+<a href="/register"> <button>Register</button></a>
+<% } %>
+    </form>
+</body>
+</html>
